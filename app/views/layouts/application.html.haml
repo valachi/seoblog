@@ -1,0 +1,47 @@
+!!!
+%html
+  %head
+    %title Seblog
+    =stylesheet_link_tag "application"
+    =javascript_include_tag "application"
+    =csrf_meta_tags
+  %body.home-blog
+    #page
+      #header
+        .headerNav
+          .blogtitle
+            ="seotrollblog.ru"
+          .headerColumn
+            ="&nbsp;".html_safe
+          .headerColumn
+            ="&nbsp;".html_safe
+          .categoryTitle
+            Разделы
+          .lastColumn
+            %a{href: "#"} 
+              ="01 О блоге".html_safe
+            %br
+            %a{href: "#"} 
+              ="02 Контакты".html_safe
+            %br
+            %a{href: "#"} 
+              ="02 Услуги".html_safe
+            %br
+            %a{href: "#"} 
+              ="01 О блоге".html_safe
+            %br
+            %a{href: "#"} 
+              ="02 Контакты".html_safe
+            %br
+            %a{href: "#"} 
+              ="02 Услуги".html_safe
+            %br
+
+          .description
+            ="Но при правильном применении отсутствие подчеркивания у ссылок может придать определенный эффект сайту. Часто делается, что при наведении курсора, ссылка становится подчеркнутой, меняет свой цвет, или используется и то и другое действие... "
+
+      =yield
+      #navMain
+      #footer
+        %p Типа все права защищены и все такое
+

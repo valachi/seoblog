@@ -1,0 +1,18 @@
+-@posts.each do |post|
+  .postMain
+    .column1
+      %p Post title
+      .postTitle
+        =link_to post.title, post
+        .postDate
+          Опубликовано #{post.created_at}
+    .column2
+      .column2title
+        %p Post preview
+        %p
+        =image_tag "http://oboi.kards.qip.ru/images/wallpaper/29/5c/23593_800_600.jpg", width: 564
+        %p
+        =post.preview
+    .column3
+      %p Post Meta
+      %p Какой-то стафф

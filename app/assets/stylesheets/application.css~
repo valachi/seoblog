@@ -105,11 +105,3 @@ a:hover {
     text-align: center;
     width: 1009px;
 }
-
-/*footer*/
-#footer {
-    background: none repeat scroll 0 0 #FFFFFF;
-    margin: 30px 0 0;
-    padding-bottom: 30px;
-    width: 1009px;
-}

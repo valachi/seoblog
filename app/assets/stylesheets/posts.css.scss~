@@ -38,6 +38,9 @@
 
 .postMain .column2 p {
     margin: 0 0 15px;
+    text-align: left;
+    color: #333333;
+    font-family: 'Courier New',Courier,Lucida Grande,Verdana,Arial,Sans-Serif;
 }
 .postMain .column2 p	{
 	margin: 0 0 15px 0;
