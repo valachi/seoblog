@@ -16,8 +16,12 @@
 	float: left;
 	position: relative;
 	}
+.postMain .column1 p {
+    margin: 0 0 15px;
+}
 .postMain .column2	{
 	width: 564px;
+  color: black;
 	margin-left: 15px;
 	margin-bottom: 30px;
 	font-size: 14px;
@@ -60,7 +64,7 @@
 	background: #000;
 	}
 .postMain .postTitle a:hover	{
-	background: #01adff;
+	background: #E20523;
 	text-decoration: none;
 	}
 .postMain .postDate	{
