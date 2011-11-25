@@ -5,44 +5,15 @@
     =stylesheet_link_tag "application"
     =javascript_include_tag "application"
     =csrf_meta_tags
-  %body.home-blog
-    #page
-      #header
-        .headerNav
-          .blogtitle
-            =link_to "seotrollblog.ru", root_path
-          .headerColumn
-            ="&nbsp;".html_safe
-          .headerColumn
-            ="&nbsp;".html_safe
-          .categoryTitle
-            Разделы
-          .lastColumn
-            %a{href: "#"} 
-              01 О блоге
-            %br
-            %a{href: "#"} 
-              02 Контакты
-            %br
-            %a{href: "#"} 
-              02 Услуги
-            %br
-            %a{href: "#"} 
-              01 О блоге
-            %br
-            %a{href: "#"} 
-              02 Контакты
-            %br
-            %a{href: "#"} 
-              02 Услуги
-            %br
-
-          .description
-            Но при правильном применении отсутствие подчеркивания у ссылок может придать определенный эффект сайту. Часто делается, что при наведении курсора, ссылка становится подчеркнутой, меняет свой цвет, или используется и то и другое действие...
-
-      =yield
-
+  %body
+    #container
+      %header
+        =link_to image_tag("http://thoughtbot.com/assets/giantrobots/images/logo.png"), root_path
+        .header-text
+          %p 
+            Блог сео троля Никакой чуши 
+            %br 
+            никакой абсолютно
+      #post
+        =yield
       #footer
-        .footerMessage
-          Типа все права защищены и все такое. Контент не воровать.
-

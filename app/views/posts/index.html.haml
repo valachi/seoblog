@@ -1,23 +1,6 @@
 -@posts.each do |post|
-  .postMain
-    .column1
-      %p 
-        Post title
-      .postTitle
-        =link_to post.title, post
-        .postDate
-          Опубликовано #{post.created_at}
-    .column2
-      .column2title
-        %p Post preview
-      %p
-      =image_tag "http://oboi.kards.qip.ru/images/wallpaper/29/5c/23593_800_600.jpg", width: 564
-      %p
-      =raw RedCloth.new(post.preview).to_html
-    .column3
-      %p Post Meta
-      %p Какой-то стафф
-
-#navMain
-  .older
-    =will_paginate @posts
+  .post-info
+    =(post.created_at).strftime("%B, %d")
+  .post-text
+    %h2=link_to post.title, post
+    %p=post.preview
