@@ -31,5 +31,4 @@ p {
   font: 400 14px/14px "skolar-1","skolar-2",Georgia,serif;
   margin: 0 0 44px;
   color: #333333;
-  font-weight: 400;
 }

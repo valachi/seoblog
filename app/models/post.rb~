@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  Post.per_page = 1
+  Post.per_page = 6
 
   def to_param
     "#{id}-#{title.parameterize}"

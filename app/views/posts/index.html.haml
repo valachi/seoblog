@@ -1,6 +1,8 @@
 -@posts.each do |post|
   .post-info
-    =(post.created_at).strftime("%B, %d")
+    %p=(post.created_at).strftime("%B %d, %Y")
   .post-text
     %h2=link_to post.title, post
     %p=post.preview
+
+=will_paginate @posts

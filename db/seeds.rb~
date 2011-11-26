@@ -1,7 +1,7 @@
 # encoding: UTF-8
 
 Post.delete_all
-4.times do |_|
+3.times do |_|
   Post.create(title: "Самый маленький в мире робот на радиоуправлении",
               preview: %{Известный своими передовыми игрушками японский 
                          производитель Takara Tomy недавно показал миру 

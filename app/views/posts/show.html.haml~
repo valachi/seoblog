@@ -11,7 +11,7 @@
     %p
     =image_tag "http://oboi.kards.qip.ru/images/wallpaper/29/5c/23593_800_600.jpg", width: 564
     %p
-    =@post.content
+    =raw RedCloth.new(@post.content).to_html
   .column3
     %p Post Meta
     %p Какой-то стафф

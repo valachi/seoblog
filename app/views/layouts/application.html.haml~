@@ -8,8 +8,7 @@
   %body
     #container
       %header
-        =link_to image_tag("http://thoughtbot.com/assets/giantrobots/images/logo.png"), \
-        root_path
+        =link_to image_tag("http://files.sharenator.com/trollface_RE_Sharenator_Community_UNITE-s300x273-150640.jpg"), root_path
         .header-text
           %p 
             Блог сео троля Никакой чуши 
