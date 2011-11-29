@@ -1,8 +1,9 @@
 class Post < ActiveRecord::Base
-  Post.per_page = 6
+  acts_as_taggable
+  Post.per_page = 3
 
   def to_param
-    "#{id}-#{title.parameterize}"
+    permalink
   end
 
 end

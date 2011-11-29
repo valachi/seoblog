@@ -4,11 +4,17 @@
     %title Seblog
     =stylesheet_link_tag "application"
     =javascript_include_tag "application"
+    =javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js"
+    = javascript_include_tag "jquery.synctranslit"
     =csrf_meta_tags
+    :javascript
+      $(document).ready(function(){
+          $("#post_title").syncTranslit({destination: "post_permalink"});
+      }); 
   %body
     #container
       %header
-        =link_to image_tag("http://files.sharenator.com/trollface_RE_Sharenator_Community_UNITE-s300x273-150640.jpg"), root_path
+        =link_to image_tag("http://thoughtbot.com/assets/giantrobots/images/logo.png"), root_path
         .header-text
           %p 
             Блог сео троля Никакой чуши 

@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-  http_basic_authenticate_with :name => "valachi", :password => "avelina", :except => [:index, :show]
+  http_basic_authenticate_with :name => "valachi", :password => "avelina", :except => [:index, :show, :tagged]
 
   def index
     @posts = Post.paginate(:page => params[:page], order: 'created_at DESC')
@@ -80,5 +80,9 @@ class PostsController < ApplicationController
       format.html { redirect_to posts_url }
       format.json { head :ok }
     end
+  end
+
+  def tagged
+    @tagged_posts = Post.tagged_with(params[:tag]).paginate(:page => params[:page], order: 'created_at DESC')
   end
 end
