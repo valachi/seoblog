@@ -1,0 +1,25 @@
+.post-text
+  .post-content
+    %h1 Обратная связь
+    %p Заполните форму ниже, чтобы связаться со мной. Если вы адекватны, я вам обязательно отвечу.
+
+    =form_for @contact_form, url: :send_email_path do |f|
+      -if @contact_form.errors.any?
+        #error_explanation
+          %h2=pluralize(@contact_form.errors.count, "error")
+          %ul
+            -@contact_form.errors.full_messages do |msg|
+              %li=msg
+
+      .field  
+        =f.label :name, "Ваше имя*"
+        =f.text_field :name, placeholder: "например, Димка"
+      .field  
+        =f.label :email, "Ваше email*"
+        =f.text_field :email, placeholder: "например, dimka@yandex.ru"
+      .field  
+        =f.label :body, "Текст сообщения*"
+        =f.text_area :body
+      .form_button
+        =f.submit "Отправить сообщение"
+

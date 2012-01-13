@@ -31,8 +31,8 @@ GEM
       activesupport (= 3.1.0)
     activesupport (3.1.0)
       multi_json (~> 1.0)
-    acts-as-taggable-on (2.1.1)
-      rails
+    acts-as-taggable-on (2.2.2)
+      rails (~> 3.0)
     ansi (1.4.1)
     arel (2.2.1)
     bcrypt-ruby (3.0.1)
@@ -122,7 +122,7 @@ PLATFORMS
 
 DEPENDENCIES
   RedCloth
-  acts-as-taggable-on (~> 2.1.0)
+  acts-as-taggable-on (~> 2.2.2)
   coffee-rails (~> 3.1.0)
   execjs
   haml

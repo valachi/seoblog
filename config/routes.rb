@@ -1,7 +1,15 @@
 Seoblog::Application.routes.draw do
-  resources :posts
+
+  match "contact" => 'static#contact', as: :contact
+  match "partners" => 'static#partners', as: :partners
+  match "contact_me" => 'contact_me#new', as: :contact_me
+  post "contact_me/send_email", as: :send_email_path
+
   root :to => 'posts#index'
-  match 'tagged' => 'posts#tagged'
+  
+  resources :posts do
+    match 'tagged' => 'posts#tagged', on: :collection
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

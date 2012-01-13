@@ -1,9 +1,11 @@
+# encoding: UTF-8
 class PostsController < ApplicationController
 
   http_basic_authenticate_with :name => "valachi", :password => "avelina", :except => [:index, :show, :tagged]
 
   def index
     @posts = Post.paginate(:page => params[:page], order: 'created_at DESC')
+    @meta_title = "Блог Павла Варела"
 
     respond_to do |format|
       format.html # index.html.erb
@@ -84,5 +86,6 @@ class PostsController < ApplicationController
 
   def tagged
     @tagged_posts = Post.tagged_with(params[:tag]).paginate(:page => params[:page], order: 'created_at DESC')
+    @meta_title = "Посты с тегом #{params[:tag].capitalize}"
   end
 end

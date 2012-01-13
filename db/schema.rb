@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111128111024) do
+ActiveRecord::Schema.define(:version => 20120111152928) do
 
   create_table "posts", :force => true do |t|
     t.text     "title"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20111128111024) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "permalink"
+    t.string   "meta_title"
   end
 
   create_table "seasons", :force => true do |t|

@@ -20,7 +20,7 @@ gem 'mysql2', '~> 0.3.6'
 gem 'haml'
 gem 'RedCloth'
 gem 'will_paginate', "~> 3.0.pre4"
-gem 'acts-as-taggable-on', '~>2.1.0'
+gem 'acts-as-taggable-on', '~> 2.2.2'
 
 gem 'jquery-rails'
 

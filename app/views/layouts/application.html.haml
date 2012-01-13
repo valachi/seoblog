@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title Seblog
+    %title=set_title
     =stylesheet_link_tag "application"
     =javascript_include_tag "application"
     =javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js"
@@ -14,12 +14,14 @@
   %body
     #container
       %header
-        =link_to image_tag("http://thoughtbot.com/assets/giantrobots/images/logo.png"), root_path
-        .header-text
-          %p 
-            Блог сео троля Никакой чуши 
-            %br 
-            никакой абсолютно
+        .logo
+          =link_to image_tag("http://www.savepic.org/2300316.png", size: "83x85"), root_path
+        %nav
+          %ul
+            %li=link_to "ГЛАВНАЯ", root_path
+            %li=link_to "ПАРТНЕРСТВО", partners_path
+            %li=link_to "ОБРАТНАЯ СВЯЗЬ", contact_me_path        
       #post
+        =notice if notice
         =yield
       #footer
