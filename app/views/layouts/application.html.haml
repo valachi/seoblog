@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title=set_title
+    =set_title
     =stylesheet_link_tag "application"
     =javascript_include_tag "application"
     =javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js"
@@ -22,6 +22,5 @@
             %li=link_to "ПАРТНЕРСТВО", partners_path
             %li=link_to "ОБРАТНАЯ СВЯЗЬ", contact_me_path        
       #post
-        =notice if notice
         =yield
       #footer

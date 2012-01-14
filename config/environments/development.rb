@@ -39,4 +39,5 @@ Seoblog::Application.configure do
     :password             => 'w2p05gfoot',
     :authentication       => 'plain',
     :enable_starttls_auto => true  }
+
 end

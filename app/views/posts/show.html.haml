@@ -1,1 +1,6 @@
 =render @post
+.post_comments
+  %h3 Комментарии
+  =render @post.comments
+  %h3 Добавить новый комментарий
+  =render 'comments/form'

@@ -1,0 +1,31 @@
+=form_for(@post) do |f|
+  -if @post.errors.any?
+    #error_explanation
+      %h2=pluralize(@post.errors.count, "error")
+      %ul
+      -@post.errors.full_messages.each do |msg|
+        %li=msg
+
+  .form_field
+    =f.label :meta_title
+    =f.text_field :meta_title
+  .form_field
+    =f.label :permalink
+    =f.text_field :permalink
+  .form_field
+    f.label :title
+    = f.text_field :title 
+  .form_field
+    = f.label :preview 
+    = f.text_area :preview 
+  .form_field
+    = f.label :content 
+    = f.text_area :content, :size => '80x20' 
+  .form_field
+    = f.label :tags_list 
+    = f.text_field :tag_list 
+  .form_field
+    = f.label :visible 
+    = f.check_box :visible, :checked => true 
+  .form_button
+    = f.submit 

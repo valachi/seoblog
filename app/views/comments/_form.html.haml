@@ -1,0 +1,16 @@
+.h3 Комментарии
+=form_for([@post, @comment]) do |f|
+  -if @comment.errors.any?
+    #error_explanation
+      %h2=pluralize(@comment.errors.count, "error")
+  .form-field
+    =f.label :name
+    =f.text_field :name
+  .form-field
+    =f.label :email
+    =f.text_field :email
+  .form-field
+    =f.label :body
+    =f.text_area :body
+  .form-button
+    =f.submit "Оставить комментарий"

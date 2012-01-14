@@ -9,6 +9,7 @@ Seoblog::Application.routes.draw do
   
   resources :posts do
     match 'tagged' => 'posts#tagged', on: :collection
+    resources :comments
   end
 
   # The priority is based upon order of creation:

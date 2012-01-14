@@ -4,8 +4,8 @@ class PostsController < ApplicationController
   http_basic_authenticate_with :name => "valachi", :password => "avelina", :except => [:index, :show, :tagged]
 
   def index
-    @posts = Post.paginate(:page => params[:page], order: 'created_at DESC')
     @meta_title = "Блог Павла Варела"
+    @posts = Post.paginate(:page => params[:page], order: 'created_at DESC')
 
     respond_to do |format|
       format.html # index.html.erb
@@ -17,6 +17,7 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @post = Post.find(params[:id])
+    @comment = @post.comments.new
 
     respond_to do |format|
       format.html # show.html.erb
@@ -86,6 +87,6 @@ class PostsController < ApplicationController
 
   def tagged
     @tagged_posts = Post.tagged_with(params[:tag]).paginate(:page => params[:page], order: 'created_at DESC')
-    @meta_title = "Посты с тегом #{params[:tag].capitalize}"
+    @meta_title = "Посты с тегом #{params[:tag]}"
   end
 end

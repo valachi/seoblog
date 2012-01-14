@@ -1,12 +1,13 @@
 .post-info
   %p=(post.created_at).strftime("%B %d, %Y")
   %p.tagged Теги:
-  %ul.tags
+  %ul.info
     -post.tag_list.each do |tag|
       %li=link_to tag, {action: "tagged", :tag => tag}
+    %p.comments_count Отзывов: #{post.comments.count}
 
 .post-text
   .post-content
-    %h2=link_to post.title, post
+    %h1=link_to post.title, post
     %noindex
       %p=raw RedCloth.new(post.content).to_html
