@@ -31,6 +31,10 @@ group :production do
   gem 'pg'
 end
 
+group :development do
+  gem 'pry'
+end
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

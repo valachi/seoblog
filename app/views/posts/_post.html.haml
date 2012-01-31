@@ -11,3 +11,4 @@
     %h1=link_to post.title, post
     %noindex
       %p=raw RedCloth.new(post.content).to_html
+      =content_for :post_footer

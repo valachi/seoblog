@@ -5,12 +5,12 @@
     =stylesheet_link_tag "application"
     =javascript_include_tag "application"
     =javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js"
-    = javascript_include_tag "jquery.synctranslit"
+    =javascript_include_tag "jquery.synctranslit"
+    =csrf_meta_tags
     :javascript
       $(document).ready(function(){
           $("#post_title").syncTranslit({destination: "post_permalink"});
       }); 
-    =csrf_meta_tags
   %body
     #container
       %header

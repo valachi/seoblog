@@ -4,8 +4,8 @@ module ApplicationHelper
   end
 
   def get_title
-    if defined? @post
-      @post.meta_title.blank? ? @post.title : @post.meta_title
+    if @post
+      @post.meta_title || @post.meta_title
     else
       @meta_title
     end

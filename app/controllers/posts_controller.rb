@@ -6,7 +6,6 @@ class PostsController < ApplicationController
   def index
     @meta_title = "Блог Павла Варела"
     @posts = Post.paginate(:page => params[:page], order: 'created_at DESC')
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @posts }

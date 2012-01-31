@@ -14,7 +14,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to post_path(@post), notice: "Спасибо за комментарий"
     else
-      redirect_to post_path(@post)
+      redirect_to :back
     end
   end
 
