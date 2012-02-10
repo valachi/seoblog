@@ -1,7 +1,9 @@
---- 
-Anotherface-Header.jpg: Anotherface-Header-26f18acb5301d469ad0543fe9b047ec3.jpg
-background.jpg: background-a73e078d98ed3d0ebceab4d58a209017.jpg
-jquery-ui.min.js: jquery-ui.min-0e8a11c7e970b57b4bf5c449cb14480d.js
-jquery.min.js: jquery.min-b11f0e0c6ff2b15efcb77ee68ca72f6d.js
-application.js: application-598b6d24c53e7786ac521360ae17106d.js
-application.css: application-391576d407d260b14b5bcb3adfa687da.css
+---
+Anotherface-Header.jpg: Anotherface-Header-f828bf69798e24e6c0d41febe93d70a8.jpg
+background.jpg: background-4f6b825f82f1ff35390252576c21f7c1.jpg
+jquery.synctranslit.js: jquery.synctranslit-807c8e7cd429e042ed6fe75705e232cd.js
+jquery-ui.min.js: jquery-ui.min-4258e47b40673a02bedfda178628bfba.js
+jquery.min.js: jquery.min-17322428695737103f15e8b9db8b5909.js
+rails.validations.js: rails.validations-c3d44cbc54864a3616d1120ad43283a7.js
+application.js: application-765027fdcde2c95408d6c78593256d9d.js
+application.css: application-c70ffa7a885910e2cf92851c44420880.css
