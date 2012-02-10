@@ -52,3 +52,19 @@ header {
 }
 
 ol, ul { list-style: none outside none; }
+
+nav {
+  display: inline;
+  float: right;
+  margin-right: 0;
+  width: 630px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+} 
+nav ul li a {
+  color: #777777;
+}
+
+nav ul li a:hover {
+  color: #B81B2D;
+}

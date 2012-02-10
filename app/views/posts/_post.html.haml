@@ -2,8 +2,8 @@
   %p=(post.created_at).strftime("%B %d, %Y")
   %p.tagged Теги:
   %ul.info
-    -post.tag_list.each do |tag|
-      %li=link_to tag, {action: "tagged", :tag => tag}
+    -post.tags.each do |tag|
+      %li=link_to tag.name, {action: "tagged", :tag => tag.name}
     %p.comments_count Отзывов: #{post.comments.count}
 
 .post-text

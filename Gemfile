@@ -21,6 +21,9 @@ gem 'haml'
 gem 'RedCloth'
 gem 'will_paginate', "~> 3.0.pre4"
 gem 'acts-as-taggable-on', '~> 2.2.2'
+gem 'russian', '~> 0.6.0'
+
+gem 'client_side_validations'
 
 gem 'jquery-rails'
 
